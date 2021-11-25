@@ -68,7 +68,7 @@ def a(client, message):
 
         except Exception as e:
             print(e)
-            m.edit('𝐅𝐨𝐮𝐧𝐝 𝐍𝐨𝐭𝐡𝐢𝐧𝐠. 𝐓𝐫𝐲 𝐂𝐡𝐚𝐧𝐠𝐢𝐧𝐠 𝐓𝐡𝐞 𝐒𝐩𝐞𝐥𝐥𝐢𝐧𝐠 𝐀 𝐋𝐢𝐭𝐭𝐥𝐞 😐..`[🎧](https://telegra.ph/file/0254a014cb78c3cca2df0.jpg)')
+            m.edit('𝐅𝐨𝐮𝐧𝐝 𝐍𝐨𝐭𝐡𝐢𝐧𝐠. 𝐓𝐫𝐲 𝐂𝐡𝐚𝐧𝐠𝐢𝐧𝐠 𝐓𝐡𝐞 𝐒𝐩𝐞𝐥𝐥𝐢𝐧𝐠 𝐀 𝐋𝐢𝐭𝐭𝐥𝐞 😐..`[🎧](https://te.legra.ph/file/c3dce12116a0a8af80c93.jpg)')
             return
     except Exception as e:
         m.edit(
@@ -76,7 +76,7 @@ def a(client, message):
         )
         print(str(e))
         return
-    m.edit("`Uploading Your File,Please Wait for Some Seconds...`[🎧](https://telegra.ph/file/0254a014cb78c3cca2df0.jpg)")
+    m.edit("`Uploading Your File,Please Wait for Some Seconds...`[🎧](https://te.legra.ph/file/c3dce12116a0a8af80c93.jpg)")
     try:
         with youtube_dl.YoutubeDL(ydl_opts) as ydl:
             info_dict = ydl.extract_info(link, download=True)
@@ -90,7 +90,7 @@ def a(client, message):
         message.reply_audio(audio_file, caption=rep, parse_mode='HTML',quote=False, title=title, duration=dur, performer=performer, thumb=thumb_name)
         m.delete()
     except Exception as e:
-        m.edit('**An internal Error Occured, Report This @dquser!!**[🙂](https://telegra.ph/file/0254a014cb78c3cca2df0.jpg)')
+        m.edit('**An internal Error Occured, Report This @dquser!!**[🙂](https://te.legra.ph/file/c3dce12116a0a8af80c93.jpg)')
         print(e)
     try:
         os.remove(audio_file)
