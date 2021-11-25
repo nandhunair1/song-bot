@@ -39,9 +39,7 @@ async def start(client, message):
 
 @Client.on_message(filters.text)
 def a(client, message):
-    query = ''
-    for i in message.command[1:]:
-        query += ' ' + str(i)
+    query =message.text
     print(query)
     m = message.reply('`Searching... Please Wait...`')
     ydl_opts = {"format": "bestaudio[ext=m4a]"}
