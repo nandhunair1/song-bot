@@ -20,7 +20,6 @@ async def welcome(bot,message):
                 ),
                 parse_mode="markdown"
             )
-        return
 	
 @Client.on_message(filters.left_chat_member)
 async def goodbye(bot,message):
@@ -38,7 +37,6 @@ async def goodbye(bot,message):
                 ),
                 parse_mode="markdown"
             )
-        return
 
 	
 
