@@ -87,9 +87,7 @@ def a(client, message):
         for i in range(len(dur_arr)-1, -1, -1):
             dur += (int(dur_arr[i]) * secmul)
             secmul *= 60
-        print(e)
-        message.reply_audio(audio_file, caption=rep, parse_mode='HTML',quote=False, title=title, duration=dur, performer=performer, thumb=thumb_name)
-        m.delete()
+        m.reply_audio(audio_file, caption=rep, parse_mode='HTML',quote=False, title=title, duration=dur, performer=performer, thumb=thumb_name)
     except Exception as e:
         m.edit('**An internal Error Occured, Report This @dquser!!**[🙂](https://telegra.ph/file/0254a014cb78c3cca2df0.jpg)')
         print(e)
