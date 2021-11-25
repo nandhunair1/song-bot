@@ -25,7 +25,7 @@ async def welcome(bot,message):
 @Client.on_message(filters.left_chat_member)
 async def goodbye(bot,message):
 	chatid= message.chat.id
-	await bot.send_message(text=f"</b>Bye ,  {message.from_user.mention} , Have a Nice Day</b>",
+	await bot.send_message(text=f"<b>Bye ,  {message.from_user.mention} , Have a Nice Day</b>",
         reply_markup=InlineKeyboardMarkup(
                     [
                         [
