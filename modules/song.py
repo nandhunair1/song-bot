@@ -63,7 +63,7 @@ def a(client, message):
 
             performer = f"[꧁࿗༒♛DQ♛༒࿗꧂]" 
             thumb_name = f'thumb{message.message_id}.jpg'
-            thumb = requests.get(thumbnail, allow_redirects=True)
+            thumb = requests.get(thumbnail, allow_redirects=False)
             open(thumb_name, 'wb').write(thumb.content)
 
         except Exception as e:
@@ -82,7 +82,7 @@ def a(client, message):
             info_dict = ydl.extract_info(link, download=True)
             audio_file = ydl.prepare_filename(info_dict)
             ydl.process_info(info_dict)
-        rep = f'🎧 𝗧𝗶𝘁𝘁𝗹𝗲 : <a href="{link}">{title}</a>\n⏳ 𝗗𝘂𝗿𝗮𝘁𝗶𝗼𝗻 : {duration}\n👀 𝗩𝗶𝗲𝘄𝘀 : {views}\n\n📮 𝗕𝘆: {message.from_user.mention()}\n<b>📤 𝗕𝘆 :- <a href="https://t.me/tvseriezzz_music">𝑨𝒍𝒍 𝑰𝒏 𝑶𝒏𝒆 𝑮𝒓𝒐𝒖𝒑 𝕸𝖚𝖘𝖎𝖈 🎧</a>'
+        rep = f'🎧 𝗧𝗶𝘁𝘁𝗹𝗲 : <a href="{link}">{title}</a>\n⏳ 𝗗𝘂𝗿𝗮𝘁𝗶𝗼𝗻 : {duration}\n\n📮 𝗕𝘆: {message.from_user.mention()}\n\n<b>📤 𝗕𝘆 :- <a href="https://t.me/tvseriezzz_music">𝑨𝒍𝒍 𝑰𝒏 𝑶𝒏𝒆 𝑮𝒓𝒐𝒖𝒑 𝕸𝖚𝖘𝖎𝖈 🎧</a>'
         secmul, dur, dur_arr = 1, 0, duration.split(':')
         for i in range(len(dur_arr)-1, -1, -1):
             dur += (int(dur_arr[i]) * secmul)
