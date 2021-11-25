@@ -90,7 +90,7 @@ def a(client, message):
         message.reply_audio(audio_file, caption=rep, parse_mode='HTML',quote=False, title=title, duration=dur, performer=performer, thumb=thumb_name)
         m.delete()
     except Exception as e:
-        m.edit('**An internal Error Occured, Report This @dquser!!**[🙂](https://te.legra.ph/file/c3dce12116a0a8af80c93.jpg)')
+        m.edit('**An internal Error Occured, Report This @MrC_VENOM_2!!**[🙂](https://te.legra.ph/file/c3dce12116a0a8af80c93.jpg)')
         print(e)
     try:
         os.remove(audio_file)
