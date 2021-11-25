@@ -9,12 +9,7 @@ import time
 from config import Config
 from pyrogram.types import InlineKeyboardMarkup, InlineKeyboardButton
 
-ABS="Developer"
 APPER="mrc_venom"
-OWNER="Owner"
-GITCLONE="https://t.me/tvseriezzz_music"
-B2="telegram.dog/mrc_venom"
-BUTTON1="📜 Source Code 📜"
 
 def time_to_seconds(time):
     stringt = str(time)
@@ -26,10 +21,11 @@ async def start(client, message):
          reply_markup=InlineKeyboardMarkup(
             [
                 [
-                    InlineKeyboardButton(BUTTON1, url=GITCLONE)
-                 ],[
-                    InlineKeyboardButton(OWNER, url=f"https://telegram.dog/{Config.OWNER}"),
-                    InlineKeyboardButton(ABS, url=B2)
+                    InlineKeyboardButton('😌 𝗗𝗲𝘃𝗲𝗹𝗼𝗽𝗲𝗿', url='https://t.me/MrC_VENOM'),
+                    InlineKeyboardButton('Group 😎', url='https://t.me/tvseriezzz')
+                ],
+                [
+                    InlineKeyboardButton('Search Inline', switch_inline_query_current_chat='')
             ]
           ]
         ),
@@ -41,7 +37,7 @@ async def start(client, message):
 def a(client, message):
     query =message.text
     print(query)
-    m = message.reply('`Searching... Please Wait...`')
+    m = message.reply('`🔎 𝗦𝗲𝗮𝗿𝗰𝗵𝗶𝗻𝗴 𝘁𝗵𝗲 𝗦𝗼𝗻𝗴.... 😌`')
     ydl_opts = {"format": "bestaudio[ext=m4a]"}
     try:
         results = []
@@ -72,15 +68,15 @@ def a(client, message):
 
         except Exception as e:
             print(e)
-            m.edit('**👎 Nothing found Retry with another !**')
+            m.edit('𝐅𝐨𝐮𝐧𝐝 𝐍𝐨𝐭𝐡𝐢𝐧𝐠. 𝐓𝐫𝐲 𝐂𝐡𝐚𝐧𝐠𝐢𝐧𝐠 𝐓𝐡𝐞 𝐒𝐩𝐞𝐥𝐥𝐢𝐧𝐠 𝐀 𝐋𝐢𝐭𝐭𝐥𝐞 😐....')
             return
     except Exception as e:
         m.edit(
-            "**Enter Song Name with /song Command!**"
+            "❎ 𝐹𝑜𝑢𝑛𝑑 𝑁𝑜𝑡ℎ𝑖𝑛𝑔. 𝐒𝐨𝐫𝐫𝐲.\n\n𝖯𝗅𝖾𝖺𝗌𝖾 𝖳𝗋𝗒 𝖠𝗀𝖺𝗂𝗇 𝖮𝗋 𝖲𝖾𝖺𝗋𝖼𝗁 𝖺𝗍 Google.com 𝖥𝗈𝗋 𝖢𝗈𝗋𝗋𝖾𝖼𝗍 𝖲𝗉𝖾𝗅𝗅𝗂𝗇𝗀 𝗈𝖿 𝗍𝗁𝖾 𝙎𝙤𝙣𝙜.\n\nEg.` Believer ´"
         )
         print(str(e))
         return
-    m.edit("`Bruh... Uploading... Please Wait...`")
+    m.edit("`Uploading Your File,Please Wait for Some Seconds.....`")
     try:
         with youtube_dl.YoutubeDL(ydl_opts) as ydl:
             info_dict = ydl.extract_info(link, download=True)
