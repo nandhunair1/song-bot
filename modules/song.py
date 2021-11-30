@@ -89,6 +89,7 @@ def a(client, message):
             secmul *= 60
         message.reply_audio(audio_file, caption=rep, parse_mode='HTML',quote=False, title=title, duration=dur, performer=performer, thumb=thumb_name)
         m.delete()
+        message.delete()
     except Exception as e:
         m.edit('**An internal Error Occured, Report This @MrC_VENOM_2!!**[🙂](https://te.legra.ph/file/c3dce12116a0a8af80c93.jpg)')
         print(e)
