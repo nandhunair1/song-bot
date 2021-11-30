@@ -9,7 +9,6 @@ from pyrogram.types import InlineKeyboardMarkup, InlineKeyboardButton
 async def welcome(bot,message):
 	chatid= message.chat.id
 	await bot.send_message(text=f"<b>Hello {message.from_user.mention} 🙂</b>\n\n<b>Welcome to {message.chat.title} ,  Happy to see you</b>",chat_id=chatid)
-        message.delete(60)
 
         
 @Client.on_message(filters.left_chat_member)
