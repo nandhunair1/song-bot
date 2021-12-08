@@ -10,8 +10,7 @@ from pyrogram.types import InlineKeyboardMarkup, InlineKeyboardButton
 async def welcome(bot,message):
 	chatid= message.chat.id
 	k =await bot.send_message(text=f"<b>Hello {message.from_user.mention} 🙂</b>\n\n<b>Welcome to {message.chat.title} ,  Happy to see you</b>",chat_id=chatid)
-        await asyncio.sleep(300)
-        await k.delete()
+        await k.delete(300)
         return
 
         
