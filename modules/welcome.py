@@ -1,4 +1,7 @@
 import os
+import asyncio
+
+import pyrogram
 from pyrogram import Client, filters
 from pyrogram.types import Message, User
 from pyrogram.types import InlineKeyboardMarkup, InlineKeyboardButton
@@ -9,7 +12,9 @@ from pyrogram.types import InlineKeyboardMarkup, InlineKeyboardButton
 async def welcome(bot,message):
 	chatid= message.chat.id
 	await bot.send_message(text=f"<b>Hello {message.from_user.mention} 🙂</b>\n\n<b>Welcome to {message.chat.title} ,  Happy to see you</b>",chat_id=chatid)
-        await bot.send_message.delete(300)
+        await asyncio.sleep(300)
+        await bot.send_message.delete()
+        return
 
         
 @Client.on_message(filters.left_chat_member)
