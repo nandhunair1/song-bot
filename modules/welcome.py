@@ -1,5 +1,4 @@
 import os
-import asyncio
 from pyrogram import Client, filters
 from pyrogram.types import Message, User
 from pyrogram.types import InlineKeyboardMarkup, InlineKeyboardButton
@@ -9,9 +8,7 @@ from pyrogram.types import InlineKeyboardMarkup, InlineKeyboardButton
 @Client.on_message(filters.new_chat_members)
 async def welcome(bot,message):
 	chatid= message.chat.id
-	k =await bot.send_message(text=f"<b>Hello {message.from_user.mention} 🙂</b>\n\n<b>Welcome to {message.chat.title} ,  Happy to see you</b>",chat_id=chatid)
-        await k.delete(300)
-        return
+	await bot.send_message(text=f"<b>Hello {message.from_user.mention} 🙂</b>\n\n<b>Welcome to {message.chat.title} ,  Happy to see you</b>",chat_id=chatid)
 
         
 @Client.on_message(filters.left_chat_member)
